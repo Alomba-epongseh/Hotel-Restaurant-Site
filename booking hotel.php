@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+
+    include("db.php");
+
+?>
 <html lang="en">
 
 <head>
@@ -130,70 +135,76 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form>
+                            <form action="booking hotel.php" method="post" enctype="multipart/form-data">
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                            <input type="text" class="form-control" id="name" name="Name" placeholder="Your Name" required>
                                             <label for="name">Your Name</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                            <input type="email" class="form-control" id="email" name="Email" placeholder="Your Email" required>
                                             <label for="email">Your Email</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating date" id="date3" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input" id="checkin" placeholder="Check In" data-target="#date3" data-toggle="datetimepicker" />
+                                            <input type="text" class="form-control datetimepicker-input" id="checkin" name="Check-In" placeholder="Check In" data-target="#date3" data-toggle="datetimepicker" required/>
                                             <label for="checkin">Check In</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating date" id="date4" data-target-input="nearest">
-                                            <input type="text" class="form-control datetimepicker-input" id="checkout" placeholder="Check Out" data-target="#date4" data-toggle="datetimepicker" />
+                                            <input type="text" class="form-control datetimepicker-input" id="checkout" name="Check-Out" placeholder="Check Out" data-target="#date4" data-toggle="datetimepicker" required/>
                                             <label for="checkout">Check Out</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <select class="form-select" id="select1">
-                                              <option value="1">Adult 1</option>
-                                              <option value="2">Adult 2</option>
-                                              <option value="3">Adult 3</option>
+                                            <select class="form-select" id="select1" name="Adults" required>
+                                                <option value="1">Select Adult</option>
+                                                <option value="2">Adult 1</option>
+                                                <option value="3">Adult 2</option>
+                                                <option value="4">Adult 3</option>
                                             </select>
                                             <label for="select1">Select Adult</label>
                                           </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <select class="form-select" id="select2">
-                                              <option value="1">Child 1</option>
-                                              <option value="2">Child 2</option>
-                                              <option value="3">Child 3</option>
+                                            <select class="form-select" id="select2" name="Children" required>
+                                              <option value="1">Select Children</option>
+                                              <option value="2">Child 1</option>
+                                              <option value="3">Child 2</option>
+                                              <option value="4">Child 3</option>
                                             </select>
                                             <label for="select2">Select Child</label>
                                           </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <select class="form-select" id="select3">
-                                              <option value="1">Room 1</option>
-                                              <option value="2">Room 2</option>
-                                              <option value="3">Room 3</option>
+                                            <select class="form-select" id="select3" name="Room_type" required>
+                                              <option value="1">Select A Room</option>
+                                              <option value="2">Simple suite</option>
+                                              <option value="3">Executive Suite</option>
+                                              <option value="4">Children Suite</option>
+                                              <option value="5">Master Suite</option>
+                                              <option value="6">Classic Deluxe</option>
+                                              <option value="7">Junior Deluxe</option>
                                             </select>
                                             <label for="select3">Select A Room</label>
                                           </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Special Request" id="message" style="height: 100px"></textarea>
+                                            <textarea class="form-control" placeholder="Special Request" id="message" name="Special_request" style="height: 100px"></textarea>
                                             <label for="message">Special Request</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+                                        <button class="btn btn-primary w-100 py-3" type="submit" name="insert_post">Book Now</button>
                                     </div>
                                 </div>
                             </form>
@@ -301,3 +312,27 @@
 </body>
 
 </html>
+
+<?php
+
+if (isset($_POST['insert_post'])) {
+    $Name = $_POST['Name'];
+    $Email = $_POST['Email'];
+    $Check_In = $_POST['Check-In'];
+    $Check_out = $_POST['Check-Out'];
+    $Adults = $_POST['Adults'];
+    $Children = $_POST['Children'];
+    $Room_Type = $_POST['Room_type'];
+    $Special_Request = $_POST['Special_request'];
+}
+
+$insert_details = "insert into roombooking (Name, Email, Check-In, Check-Out, Adults, Children, Room Type, Special Request) values ('$Name','$Email','$Check_In','$Check_out','$Adults','$Children','$Room_Type','$Special_Request') ";
+
+$insert_det = mysqli_query($con, $insert_details);
+
+if($insert_det){
+    echo "<script>alert('Room Successfully Booked')</script>";
+    echo "<script>alert('We will get back to you, if any changes.')</script>";
+    echo "<script>window.open('booking hotel.php','_self')</script>";
+}
+?>
