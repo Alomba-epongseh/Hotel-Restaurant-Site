@@ -101,32 +101,34 @@
                     <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
                         <h1 class="text-white mb-4">Book A Table Online</h1>
-                        <form>
+                        <form action="booking.php" method="post" enctype="multipart/form-data">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" name="Name" required>
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" name="Email" required>
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                                        <input type="text" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" name="Date_time" required />
                                         <label for="datetime">Date & Time</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select" id="select1">
-                                          <option value="1">People 1</option>
-                                          <option value="2">People 2</option>
-                                          <option value="3">People 3</option>
+                                        <select class="form-select" id="select1" name="People" required>
+                                          <option value="1">Number of People</option>
+                                          <option value="2">1 Person</option>
+                                          <option value="3">2 People</option>
+                                          <option value="4">3 People</option>
+                                          <option value="5">4 People</option>
                                         </select>
                                         <label for="select1">No Of People</label>
                                       </div>
@@ -138,7 +140,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+                                    <button class="btn btn-primary w-100 py-3" type="submit" name="insert_post">Book Now</button>
                                 </div>
                             </div>
                         </form>
@@ -233,3 +235,25 @@
 </body>
 
 </html>
+
+
+<?php
+
+if (isset($_POST['insert_post'])) {
+    $Name = $_POST['Name'];
+    $Email = $_POST['Email'];
+    $Date_time = $_POST['Date_time'];
+    $People = $_POST['People'];
+    $Special_Request = $_POST['Special_Request'];
+}
+
+$insert_details = "insert into tablebooking (Name, Email, Date/Time, People, Special Request) values ('$Name','$Email','$Date_time','$People','$Special_Request') ";
+
+$insert_det = mysqli_query($con, $insert_details);
+
+if($insert_det){
+    echo "<script>alert('Room Successfully Booked')</script>";
+    echo "<script>alert('We will get back to you, if any changes.')</script>";
+    echo "<script>window.open('booking hotel.php','_self')</script>";
+}
+?>
