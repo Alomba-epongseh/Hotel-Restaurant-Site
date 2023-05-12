@@ -67,20 +67,20 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse bg-dark navbar-collapse justify-content-between" id="navbarCollapse">
-                            <div class="navbar-nav mr-auto py-0">
-                                <a href="index hotel.html" class="nav-item nav-link ">Home</a>
-                                <a href="about hotel.html" class="nav-item nav-link">About</a>
-                                <a href="service hotel.html" class="nav-item nav-link">Services</a>
-                                <a href="hotel room.html" class="nav-item nav-link">Rooms</a>
+                        <div class="navbar-nav mr-auto py-0">
+                                <a href="index hotel.php" class="nav-item nav-link ">Home</a>
+                                <a href="about hotel.php" class="nav-item nav-link">About</a>
+                                <a href="service hotel.php" class="nav-item nav-link">Services</a>
+                                <a href="hotel room.php" class="nav-item nav-link">Rooms</a>
                                 <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Others</a>
                                     <div class="dropdown-menu rounded-0 m-0">
-                                        <a href="booking hotel.html" class="dropdown-item active">Booking</a>
-                                        <a href="team hotel.html" class="dropdown-item">Our Team</a>
-                                        <a href="testimonial hotel.html" class="dropdown-item">Testimonial</a>
+                                        <a href="booking hotel.php" class="dropdown-item active">Booking</a>
+                                        <a href="team hotel.php" class="dropdown-item">Our Team</a>
+                                        <a href="testimonial hotel.php" class="dropdown-item">Testimonial</a>
                                     </div>
                                 </div>
-                                <a href="contact hotel.html" class="nav-item nav-link">Contact</a>
+                                <a href="contact hotel.php" class="nav-item nav-link">Contact</a>
  
                             </div>
                         </div>

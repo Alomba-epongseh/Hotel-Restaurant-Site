@@ -53,23 +53,22 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
+                <div class="navbar-nav ms-auto py-0 pe-4">
+                        <a href="index.php" class="nav-item nav-link ">Home</a>
+                        <a href="about.php" class="nav-item nav-link">About</a>
+                        <a href="service.php" class="nav-item nav-link">Service</a>
+                        <a href="menu.php" class="nav-item nav-link">Menu</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Others</a>
                             <div class="dropdown-menu m-0">
-                                <a href="booking.html" class="dropdown-item active">Booking</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="booking.php" class="dropdown-item active">Booking</a>
+                                <a href="team.php" class="dropdown-item">Our Team</a>
+                                <a href="testimonial.php" class="dropdown-item">Testimonial</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="contact.php" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Book A Table</a>
+                    <a href="booking.php" class="btn btn-primary py-2 px-4">Book A Table</a>
                 </div>
             </nav>
 
@@ -239,13 +238,15 @@
 
 <?php
 
+$con = mysqli_connect("localhost","root","mysql","vanillier");
+
 if (isset($_POST['insert_post'])) {
     $Name = $_POST['Name'];
     $Email = $_POST['Email'];
     $Date_time = $_POST['Date_time'];
     $People = $_POST['People'];
     $Special_Request = $_POST['Special_Request'];
-}
+
 
 $insert_details = "insert into tablebooking (Name, Email, Date/Time, People, Special Request) values ('$Name','$Email','$Date_time','$People','$Special_Request') ";
 
@@ -255,5 +256,6 @@ if($insert_det){
     echo "<script>alert('Room Successfully Booked')</script>";
     echo "<script>alert('We will get back to you, if any changes.')</script>";
     echo "<script>window.open('booking hotel.php','_self')</script>";
+}
 }
 ?>

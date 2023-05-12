@@ -62,20 +62,20 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse bg-dark navbar-collapse justify-content-between" id="navbarCollapse">
-                            <div class="navbar-nav mr-auto py-0">
-                                <a href="index hotel.html" class="nav-item nav-link ">Home</a>
-                                <a href="about hotel.html" class="nav-item nav-link active">About</a>
-                                <a href="service hotel.html" class="nav-item nav-link">Services</a>
-                                <a href="hotel room.html" class="nav-item nav-link">Rooms</a>
+                        <div class="navbar-nav mr-auto py-0">
+                                <a href="index hotel.php" class="nav-item nav-link ">Home</a>
+                                <a href="about hotel.php" class="nav-item nav-link">About</a>
+                                <a href="service hotel.php" class="nav-item nav-link active">Services</a>
+                                <a href="hotel room.php" class="nav-item nav-link">Rooms</a>
                                 <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Others</a>
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Others</a>
                                     <div class="dropdown-menu rounded-0 m-0">
-                                        <a href="booking hotel.html" class="dropdown-item">Booking</a>
-                                        <a href="team hotel.html" class="dropdown-item active">Our Team</a>
-                                        <a href="testimonial hotel.html" class="dropdown-item">Testimonial</a>
+                                        <a href="booking hotel.php" class="dropdown-item">Booking</a>
+                                        <a href="team hotel.php" class="dropdown-item">Our Team</a>
+                                        <a href="testimonial hotel.php" class="dropdown-item">Testimonial</a>
                                     </div>
                                 </div>
-                                <a href="contact hotel.html" class="nav-item nav-link">Contact</a>
+                                <a href="contact hotel.php" class="nav-item nav-link">Contact</a>
  
                             </div>
                         </div>
@@ -87,15 +87,15 @@
 
 
         <!-- Page Header Start -->
-        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-2.jpg);">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Our Team</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Services</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Our Team</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Services</li>
                         </ol>
                     </nav>
                 </div>
@@ -104,134 +104,135 @@
         <!-- Page Header End -->
 
 
-        <!-- Team Start -->
+        <!-- Service Start -->
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Our Team</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Staffs</span></h1>
+                    <h6 class="section-title text-center text-primary text-uppercase">Our Services</h6>
+                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Services</span></h1>
                 </div>
                 <div class="row g-4">
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="chef img-fluid" src="img/littlechef.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp rounded" data-wow-delay="0.1s">
+                        <a class="service-item rounded" href="">
+                            <div class="service-icon bg-transparent border rounded-circle p-1 ">
+                                <div class="w-100 h-100 border rounded-circle align-items-center justify-content-center p-4">
+                                    <i class="fa fa-hotel fa-2x text-primary "></i><br>
+                                    <h5 class="mb-3">Rooms & Apartments</h5>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <a class="service-item rounded" href="">
+                            <div class="service-icon bg-transparent border rounded-circle p-1">
+                                <div class="w-100 h-100 border rounded-circle align-items-center justify-content-center p-4">
+                                    <i class="fa fa-utensils fa-2x text-primary"></i>
+                                    <h5 class="mb-3">Food & Restaurant</h5>
                                 </div>
                             </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Miss Auariora</h5>
-                                <small>Little Chef</small>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <a class="service-item rounded" href="">
+                            <div class="service-icon bg-transparent border rounded-circle p-1">
+                                <div class="w-100 h-100 border rounded-circle align-items-center justify-content-center p-4">
+                                    <i class="fa fa-spa fa-2x text-primary"></i>
+                                    <h5 class="mb-3">Spa & Fitness</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <a class="service-item rounded" href="">
+                            <div class="service-icon bg-transparent border rounded-circle p-1">
+                                <div class="w-100 h-100 border rounded-circle align-items-center justify-content-center p-4">
+                                    <i class="fa fa-swimmer fa-2x text-primary"></i>
+                                    <h5 class="mb-3">Sports & Gaming</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <a class="service-item rounded" href="">
+                            <div class="service-icon bg-transparent border rounded-circle p-1">
+                                <div class="w-100 h-100 border rounded-circle align-items-center justify-content-center p-4">
+                                    <i class="fa fa-glass-cheers fa-2x text-primary"></i>
+                                    <h5 class="mb-3">Event & Party</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <a class="service-item rounded" href="">
+                            <div class="service-icon bg-transparent border rounded-circle p-1">
+                                <div class="w-100 h-100 border rounded-circle align-items-center justify-content-center p-4">
+                                    <i class="fa fa-dumbbell fa-2x text-primary"></i>
+                                    <h5 class="mb-3">GYM & Yoga</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl testimonial my-5 py-5 bg-dark wow zoomIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="owl-carousel testimonial-carousel py-5">
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>"We had a wonderful stay at Vanillier. The environment and the atmosphere helped us to relax. We had a very good stay.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Mrs Sephora</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="chef img-fluid" src="img/chef1.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Miss Joyce N.</h5>
-                                <small>Master Baker</small>
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>We thoroughly enjoyed our stay. The staffs were always motivated to help us. The food was excellent, the chef ensured that our pallet needs were met. The hotel ambience was lovely & very serene. We look forward to coming back. Feel very revitalized after spa treatments at Maya Spa.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Mr Thomas</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="chef img-fluid" src="img/chef2.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Mr. Alberto</h5>
-                                <small>Chef</small>
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>Excellent Reception, clean tidy, sweet memories. Thank you all.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Mrs. Venugopal</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="chef img-fluid" src="img/chef3.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Mrs. Olivier</h5>
-                                <small>Supervisor</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="chef img-fluid" src="img/che4.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Mr. James</h5>
-                                <small>Chef</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="chef img-fluid" src="img/chef5.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Mrs. Vanilla</h5>
-                                <small>Nutritionist</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="chef img-fluid" src="img/chef6.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Mrs. Jacqueline</h5>
-                                <small>Chef</small>
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>Had a very relaxed stay. Great service amazing Spa. Lovely building, calming greenery, serene lake. What more could one ask for? We will be back again hopefully.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Mr Hindocha</h6>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Team End -->
+        <!-- Testimonial End -->
+
+        <!--space start-->
+        <div class="space">
+
+        </div>
+        <!--space end-->
 
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid bg-dark text-light footer  wow fadeIn" data-wow-delay="0.1s">
             <div class="container pb-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-4">

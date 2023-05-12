@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Vanillier Restoran</title>
+    <title>Vanillier</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -42,40 +42,55 @@
         </div>
         <!-- Spinner End -->
 
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Vanillier Restoran</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="booking.html" class="dropdown-item">Booking</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+        <!-- Header Start -->
+        <div class="container-fluid bg-dark px-0" style="margin-top: 10%;">
+            <div class="row gx-0">
+                <div class="col-lg-3 bg-dark d-none d-lg-block">
+                    <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                        <h1 class="m-0 text-primary text-uppercase">Vanillier</h1>
+                    </a>
+                </div>
+                <div class="col-lg-9">
+                    <div class="blank row gx-0 bg-white d-none d-lg-flex">
+                        
+                    </div>
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
+                        <a href="index.html" class="navbar-brand d-block d-lg-none">
+                            <h1 class="m-0 text-primary text-uppercase">Vanillier</h1>
+                        </a>
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse bg-dark navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                                <a href="index hotel.php" class="nav-item nav-link ">Home</a>
+                                <a href="about hotel.php" class="nav-item nav-link">About</a>
+                                <a href="service hotel.php" class="nav-item nav-link">Services</a>
+                                <a href="hotel room.php" class="nav-item nav-link">Rooms</a>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Others</a>
+                                    <div class="dropdown-menu rounded-0 m-0">
+                                        <a href="booking hotel.php" class="dropdown-item">Booking</a>
+                                        <a href="team hotel.php" class="dropdown-item">Our Team</a>
+                                        <a href="testimonial hotel.php" class="dropdown-item">Testimonial</a>
+                                    </div>
+                                </div>
+                                <a href="contact hotel.php" class="nav-item nav-link active">Contact</a>
+ 
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link active">Contact</a>
-                    </div>
-                    <a href="booking.html" class="btn btn-primary py-2 px-4">Book A Table</a>
+                    </nav>
                 </div>
-            </nav>
+            </div>
+        </div>
+        <!-- Header End -->
 
-            <div class="container-xxl py-5 bg-dark hero-header mb-5">
-                <div class="container text-center my-5 pt-5 pb-4">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Contact Us</h1>
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
+            <div class="container-fluid page-header-inner py-5">
+                <div class="container text-center pb-5">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Contact</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -86,30 +101,30 @@
                 </div>
             </div>
         </div>
-        <!-- Navbar & Hero End -->
+        <!-- Page Header End -->
 
 
         <!-- Contact Start -->
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Contact Us</h5>
-                    <h1 class="mb-5">Contact For Any Query</h1>
+                    <h6 class="section-title text-center text-primary text-uppercase">Contact Us</h6>
+                    <h1 class="mb-5"><span class="text-primary text-uppercase">Contact</span> For Any Query</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-12">
                         <div class="row gy-4">
                             <div class="col-md-4">
-                                <h5 class="section-title ff-secondary fw-normal text-start text-primary">Booking</h5>
+                                <h6 class="section-title text-start text-primary text-uppercase">Booking</h6>
                                 <p><i class="fa fa-envelope-open text-primary me-2"></i>alomba@gmail.com</p>
                             </div>
                             <div class="col-md-4">
-                                <h5 class="section-title ff-secondary fw-normal text-start text-primary">General</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>ngwingche@gmail.com</p>
+                                <h6 class="section-title text-start text-primary text-uppercase">General</h6>
+                                <p><i class="fa fa-envelope-open text-primary me-2"></i>epongseh@gmail.com</p>
                             </div>
                             <div class="col-md-4">
-                                <h5 class="section-title ff-secondary fw-normal text-start text-primary">Technical</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>epongseh@gmail.com</p>
+                                <h6 class="section-title text-start text-primary text-uppercase">Technical</h6>
+                                <p><i class="fa fa-envelope-open text-primary me-2"></i>ngwingche@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -161,42 +176,51 @@
 
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
+        <div class="container-fluid bg-dark text-light footer mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container pb-5">
                 <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
-                        <a class="btn btn-link" href="about.html">About Us</a>
-                        <a class="btn btn-link" href="contact.html">Contact Us</a>
-                        <a class="btn btn-link" href="booking.html">Reservation</a>
-                        <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Condition</a>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="bg-primary rounded p-4">
+                            <a href="index.html"><h1 class="text-white text-uppercase mb-3">Vanillier</h1></a>
+                            <div class="bg-white rounded text-center py-1">
+                                <h6 class="my-2">Subscribe Our Newsletter</h6>
+                                <div class="position-relative mx-1" style="max-width: 350px;">
+                                    <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter email">
+                                    <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-md-6 col-lg-3">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Akwa, Douala, Cameroon</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+237 676 723 201</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>alomba@gmail.com</p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h5 class="text-light fw-normal">Monday - Saturday</h5>
-                        <p>09AM - 09PM</p>
-                        <h5 class="text-light fw-normal">Sunday</h5>
-                        <p>10AM - 08PM</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
-                        <h6 class="my-2 text-white">Subscribe Our Newsletter</h6>
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    <div class="col-lg-5 col-md-12">
+                        <div class="row gy-5 g-4">
+                            <div class="col-md-6">
+                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
+                                <a class="btn btn-link" href="">About Us</a>
+                                <a class="btn btn-link" href="">Contact Us</a>
+                                <a class="btn btn-link" href="">Privacy Policy</a>
+                                <a class="btn btn-link" href="">Terms & Condition</a>
+                                <a class="btn btn-link" href="">Support</a>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
+                                <a class="btn btn-link" href="">Food & Restaurant</a>
+                                <a class="btn btn-link" href="">Spa & Fitness</a>
+                                <a class="btn btn-link" href="">Sports & Gaming</a>
+                                <a class="btn btn-link" href="">Event & Party</a>
+                                <a class="btn btn-link" href="">GYM & Yoga</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -206,6 +230,8 @@
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                             &copy; <a class="border-bottom" href="">Vanillier</a>, All Right Reserved. 
+							
+							
 							Designed By <a class="border-bottom" href="">Vanilla's code</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
@@ -219,6 +245,7 @@
                     </div>
                 </div>
             </div>
+            <br>
         </div>
         <!-- Footer End -->
 
