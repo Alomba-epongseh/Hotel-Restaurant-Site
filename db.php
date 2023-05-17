@@ -1,5 +1,5 @@
 <?php
 
-$con = mysqli_connect("localhost","root","mysql","vanillier");
+$con = mysqli_connect("localhost","root","mysql","Vanilla_Hotel");
 
 ?>

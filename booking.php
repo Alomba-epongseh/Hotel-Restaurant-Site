@@ -238,24 +238,27 @@
 
 <?php
 
-$con = mysqli_connect("localhost","root","mysql","vanillier");
+error_reporting(0);
+
+require_once("db.php");  
+//$con = mysqli_connect("localhost","root","mysql","vanilla_hotel");
 
 if (isset($_POST['insert_post'])) {
     $Name = $_POST['Name'];
     $Email = $_POST['Email'];
     $Date_time = $_POST['Date_time'];
     $People = $_POST['People'];
-    $Special_Request = $_POST['Special_Request'];
+    //$Special_Request = $_POST['Special_Request'];
 
 
-$insert_details = "insert into tablebooking (Name, Email, Date/Time, People, Special Request) values ('$Name','$Email','$Date_time','$People','$Special_Request') ";
+    $insert_details = "insert into tablebooking (Name, Email, Date/Time, People, Special Request) values ('$Name','$Email','$Date_time','$People','$Special_Request') ";
 
-$insert_det = mysqli_query($con, $insert_details);
+    $insert_det = mysqli_query($con, $insert_details);
 
-if($insert_det){
-    echo "<script>alert('Room Successfully Booked')</script>";
-    echo "<script>alert('We will get back to you, if any changes.')</script>";
-    echo "<script>window.open('booking hotel.php','_self')</script>";
-}
+    if($insert_det){
+        echo "<script>alert('Room Successfully Booked')</script>";
+        echo "<script>alert('We will get back to you, if any changes.')</script>";
+        echo "<script>window.open('booking hotel.php','_self')</script>";
+    }
 }
 ?>

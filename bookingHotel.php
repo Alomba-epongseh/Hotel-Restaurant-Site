@@ -135,7 +135,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form action="booking hotel.php" method="post" enctype="multipart/form-data">
+                            <form action="bookingHotel.php" method="post" enctype="multipart/form-data">
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
@@ -324,7 +324,6 @@ if (isset($_POST['insert_post'])) {
     $Children = $_POST['Children'];
     $Room_Type = $_POST['Room_type'];
     $Special_Request = $_POST['Special_request'];
-}
 
 $insert_details = "insert into roombooking (Name, Email, Check-In, Check-Out, Adults, Children, Room Type, Special Request) values ('$Name','$Email','$Check_In','$Check_out','$Adults','$Children','$Room_Type','$Special_Request') ";
 
@@ -334,5 +333,6 @@ if($insert_det){
     echo "<script>alert('Room Successfully Booked')</script>";
     echo "<script>alert('We will get back to you, if any changes.')</script>";
     echo "<script>window.open('booking hotel.php','_self')</script>";
+}
 }
 ?>
