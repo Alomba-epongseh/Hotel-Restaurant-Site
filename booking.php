@@ -1,3 +1,15 @@
+<?php
+
+    include 'db.php';
+
+    $conn = openconn();
+
+    echo "Connected successfully";
+
+    closeconn($conn);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -240,15 +252,13 @@
 
 error_reporting(0);
 
-require_once("db.php");  
-//$con = mysqli_connect("localhost","root","mysql","vanilla_hotel");
 
 if (isset($_POST['insert_post'])) {
     $Name = $_POST['Name'];
     $Email = $_POST['Email'];
     $Date_time = $_POST['Date_time'];
     $People = $_POST['People'];
-    //$Special_Request = $_POST['Special_Request'];
+    $Special_Request = $_POST['Special_Request'];
 
 
     $insert_details = "insert into tablebooking (Name, Email, Date/Time, People, Special Request) values ('$Name','$Email','$Date_time','$People','$Special_Request') ";

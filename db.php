@@ -1,5 +1,17 @@
 <?php
+function openconn(){
+    $dbhost = "localhost";
+    $dbuser = "Vanilla";
+    $dbpass = "Vanibelle";
+    $db = "vanillier";
 
-$con = mysqli_connect("localhost","root","mysql","Vanilla_Hotel");
+    $conn = new mysqli($dbhost, $dbuser, $dbpass, $db);
+
+    return $conn;
+}
+
+function closeconn($conn){
+    $conn -> close();
+}
 
 ?>

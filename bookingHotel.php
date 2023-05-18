@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <?php
 
-    include("db.php");
+    include 'db.php';
 
+    $conn = openconn();
+
+    echo "Connected successfully";
+
+    closeconn($conn);
 ?>
+
+
 <html lang="en">
 
 <head>
@@ -316,23 +323,26 @@
 <?php
 
 if (isset($_POST['insert_post'])) {
-    $Name = $_POST['Name'];
-    $Email = $_POST['Email'];
-    $Check_In = $_POST['Check-In'];
-    $Check_out = $_POST['Check-Out'];
-    $Adults = $_POST['Adults'];
-    $Children = $_POST['Children'];
-    $Room_Type = $_POST['Room_type'];
-    $Special_Request = $_POST['Special_request'];
+    $Name = mysqli_real_escape_string($conn, $_POST['Name']) ;
+    $Email = mysqli_real_escape_string($conn, $_POST['Email']);
+    $Check_In = mysqli_real_escape_string($conn, $_POST['Check-In']);
+    $Check_out = mysqli_real_escape_string($conn, $_POST['Check-Out']);
+    $Adults = mysqli_real_escape_string($conn, $_POST['Adults']);
+    $Children = mysqli_real_escape_string($conn, $_POST['Children']);
+    $Room_Type = mysqli_real_escape_string($conn, $_POST['Room_type']);
+    $Special_Request = mysqli_real_escape_string($conn, $_POST['Special_request']);
 
-$insert_details = "insert into roombooking (Name, Email, Check-In, Check-Out, Adults, Children, Room Type, Special Request) values ('$Name','$Email','$Check_In','$Check_out','$Adults','$Children','$Room_Type','$Special_Request') ";
+    
+    mysqli_query($conn, "SELECT * FROM roombooking");
+    mysqli_query($conn, "INSERT INTO roombooking (Full_Name, Email, Check_In, Check_Out, Adults, Children, Room_Type, Special_Request) VALUES ('$Name','$Email','$Check_In','$Check_out','$Adults','$Children','$Room_Type','$Special_Request') ");
 
-$insert_det = mysqli_query($con, $insert_details);
 
-if($insert_det){
-    echo "<script>alert('Room Successfully Booked')</script>";
-    echo "<script>alert('We will get back to you, if any changes.')</script>";
-    echo "<script>window.open('booking hotel.php','_self')</script>";
+//$insert_det = mysqli_query($conn, $insert_details);
+
+//if($insert_det){
+  //  echo "<script>alert('Room Successfully Booked')</script>";
+    //echo "<script>alert('We will get back to you, if any changes.')</script>";
+    //echo "<script>window.open('booking hotel.php','_self')</script>";
 }
-}
+//}
 ?>
