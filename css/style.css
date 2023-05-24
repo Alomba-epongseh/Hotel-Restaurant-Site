@@ -403,3 +403,14 @@
     height: 50px;
     background-color: whitesmoke;
 }
+
+/*login paage*/
+.login{
+    /*background-color: linear-gradient( rgba(120, 158, 255, 0.4), rgba(120, 158, 255, 0.4));*/
+    color: red;
+   
+}
+.bg-success {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+}
