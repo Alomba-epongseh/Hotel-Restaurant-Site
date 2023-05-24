@@ -7,6 +7,10 @@ function openconn(){
 
     $conn = new mysqli($dbhost, $dbuser, $dbpass, $db);
 
+    if (mysqli_connect_errno()) {
+        die("connection Failed");
+    }
+
     return $conn;
 }
 
