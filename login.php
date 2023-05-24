@@ -30,10 +30,10 @@
 
 </head>
 <body>
-    
-<div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/about-2-hotel.jpg);">
-    <div class="container-fluid w-50 my-5 p-5 bg-light " style="--bs-bg-opacity: .1 ">
-        <form >
+
+<div class="container-fluid page-header p-5" style="background-image: url(img/about-2-hotel.jpg); background-size: contain; height: 100vh;">
+    <div class="light container-fluid w-50  p-5 rounded " style="background: linear-gradient(rgba(177, 191, 255, 0.49),rgba(177, 191, 255, 0.49));" >
+        <form class="rounded" >
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Username</label>
                 <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="emailHelp">
@@ -54,10 +54,6 @@
         </form>
     </div>
 </div>
-<div class="login">
-    <p>red</p>
-</div>
-
 
  
 

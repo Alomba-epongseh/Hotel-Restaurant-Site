@@ -6,9 +6,8 @@
 
     echo "Connected successfully";
 
-    closeconn($conn);
+    //closeconn($conn);
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -112,11 +111,11 @@
                     <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
                         <h1 class="text-white mb-4">Book A Table Online</h1>
-                        <form action="booking.php" method="post" enctype="multipart/form-data">
+                        <form action="#" method="post" enctype="multipart/form-data">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" name="Name" required>
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" name="Full_Name" required>
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
@@ -146,7 +145,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Special Request" id="message" style="height: 100px"></textarea>
+                                        <textarea class="form-control" placeholder="Special Request" name="Special_Request" id="message" style="height: 100px"></textarea>
                                         <label for="message">Special Request</label>
                                     </div>
                                 </div>
@@ -250,25 +249,25 @@
 
 <?php
 
-error_reporting(0);
+//error_reporting(0);
 
 
 if (isset($_POST['insert_post'])) {
-    $Name = $_POST['Name'];
+    $Name = $_POST['Full_Name'];
     $Email = $_POST['Email'];
     $Date_time = $_POST['Date_time'];
     $People = $_POST['People'];
     $Special_Request = $_POST['Special_Request'];
 
 
-    $insert_details = "insert into tablebooking (Name, Email, Date/Time, People, Special Request) values ('$Name','$Email','$Date_time','$People','$Special_Request') ";
+    $bookquery = "INSERT INTO tablebooking (Full_Name, Email, DateAndTime, People, Special_Request) VALUES ('$Name','$Email','$Date_time','$People','$Special_Request')";
+    $result = mysqli_query($conn, $bookquery);
 
-    $insert_det = mysqli_query($con, $insert_details);
 
-    if($insert_det){
-        echo "<script>alert('Room Successfully Booked')</script>";
+    if($result){
+        echo "<script>alert('Table Successfully Booked')</script>";
         echo "<script>alert('We will get back to you, if any changes.')</script>";
-        echo "<script>window.open('booking hotel.php','_self')</script>";
+        echo "<script>window.open('booking.php','_self')</script>";
     }
 }
 ?>

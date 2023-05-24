@@ -5,9 +5,9 @@
 
     $conn = openconn();
 
-    echo "Connected successfully";
+    //echo "Connected successfully";
 
-    closeconn($conn);
+    //closeconn($conn);
 ?>
 
 
@@ -142,7 +142,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form action="bookingHotel.php" method="post" enctype="multipart/form-data">
+                            <form action="#" method="post" enctype="multipart/form-data">
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
@@ -323,26 +323,29 @@
 <?php
 
 if (isset($_POST['insert_post'])) {
-    $Name = mysqli_real_escape_string($conn, $_POST['Name']) ;
-    $Email = mysqli_real_escape_string($conn, $_POST['Email']);
-    $Check_In = mysqli_real_escape_string($conn, $_POST['Check-In']);
-    $Check_out = mysqli_real_escape_string($conn, $_POST['Check-Out']);
-    $Adults = mysqli_real_escape_string($conn, $_POST['Adults']);
-    $Children = mysqli_real_escape_string($conn, $_POST['Children']);
-    $Room_Type = mysqli_real_escape_string($conn, $_POST['Room_type']);
-    $Special_Request = mysqli_real_escape_string($conn, $_POST['Special_request']);
+    $Name = $_POST['Name'];
+    $Email = $_POST['Email'];
+    $Check_In = $_POST['Check-In'];
+    $Check_out = $_POST['Check-Out'];
+    $Adults = $_POST['Adults'];
+    $Children = $_POST['Children'];
+    $Room_Type = $_POST['Room_type'];
+    $Special_Request = $_POST['Special_request'];
 
     
-    mysqli_query($conn, "SELECT * FROM roombooking");
-    mysqli_query($conn, "INSERT INTO roombooking (Full_Name, Email, Check_In, Check_Out, Adults, Children, Room_Type, Special_Request) VALUES ('$Name','$Email','$Check_In','$Check_out','$Adults','$Children','$Room_Type','$Special_Request') ");
+    //mysqli_query($conn, "SELECT * FROM roombooking");
+   // mysqli_query($conn, "INSERT INTO roombooking (Full_Name, Email, Check_In, Check_Out, Adults, Children, Room_Type, Special_Request) VALUES ('$Name','$Email','$Check_In','$Check_out','$Adults','$Children','$Room_Type','$Special_Request') ");
+
+    $bookquery = "INSERT INTO roombooking (Full_Name, Email, Check_In, Check_Out, Adults, Children, Room_Type, Special_Request) VALUES ('$Name','$Email','$Check_In','$Check_out','$Adults','$Children','$Room_Type','$Special_Request')";
+    $result = mysqli_query($conn, $bookquery);
 
 
 //$insert_det = mysqli_query($conn, $insert_details);
 
-//if($insert_det){
-  //  echo "<script>alert('Room Successfully Booked')</script>";
-    //echo "<script>alert('We will get back to you, if any changes.')</script>";
-    //echo "<script>window.open('booking hotel.php','_self')</script>";
+if($result){
+    echo "<script>alert('Room Successfully Booked')</script>";
+    echo "<script>alert('We will get back to you, if any changes.')</script>";
+    echo "<script>window.open('booking hotel.php','_self')</script>";
 }
-//}
+}
 ?>

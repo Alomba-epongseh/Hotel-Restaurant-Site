@@ -99,8 +99,8 @@
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Most Relaxing And Luxurious Hotel</h1>
-                                <a href="hotel room.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
-                                <a href="booking hotel.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
+                                <a href="hotel room.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
+                                <a href="bookinghotel.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
                             </div>
                         </div>
                     </div>
@@ -110,8 +110,8 @@
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Most Relaxing And Luxurious Hotel</h1>
-                                <a href="hotel room.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
-                                <a href="booking hotel.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
+                                <a href="hotel room.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
+                                <a href="bookinghotel.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
                             </div>
                         </div>
                     </div>
@@ -121,8 +121,8 @@
                             <div class="p-3" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Most Relaxing And Luxurious Hotel</h1>
-                                <a href="hotel room.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
-                                <a href="booking hotel.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
+                                <a href="hotel room.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our Rooms</a>
+                                <a href="bookinghotel.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
                             </div>
                         </div>
                     </div>
