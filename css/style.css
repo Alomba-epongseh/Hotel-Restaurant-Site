@@ -414,7 +414,21 @@
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
 }
+.error {
 
+    background: #F2DEDE;
+ 
+    color: #0c0101;
+ 
+    padding: 10px;
+ 
+    width: 95%;
+ 
+    border-radius: 5px;
+ 
+    margin: 20px auto;
+ 
+ }
 
 /*welcome page*/
 
@@ -543,4 +557,30 @@
     background: #03C4EB;
     border: 2px solid #03C4EB;
   }
-  
+
+
+  /*admin page*/
+  .bdy{
+    background: linear-gradient(rgba(128, 128, 128, 0.43),rgba(128, 128, 128, 0.43)),url(/img/hotelview.jpg);
+    background-size: contain;
+  }
+
+  .admindashboard{
+    align-content: center; 
+    margin-top: 20%; 
+    height: 300px; 
+    width: 100%; 
+    background: linear-gradient(skyblue,lightpink);
+  }
+  .sidebar a{
+    color: black !important;
+    font-weight: bolder;
+  }
+  .sidebar a:active{
+    color: var(--primary) !important;
+    font-weight: bolder;
+  }
+  .sidebar a:hover{
+    color: var(--primary) !important;
+    font-weight: bolder;
+  }
