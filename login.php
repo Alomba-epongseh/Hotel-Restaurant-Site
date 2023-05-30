@@ -33,22 +33,25 @@
 
 <div class="container-fluid page-header p-5" style="background-image: url(img/about-2-hotel.jpg); background-size: contain; height: 100vh;">
     <div class="light container-fluid w-50  p-5 rounded " style="background: linear-gradient(rgba(177, 191, 255, 0.49),rgba(177, 191, 255, 0.49));" >
-        <form class="rounded" >
+        <form class="rounded" action="login.php" method="post" >
+        <?php 
+            if (isset($_GET['error'])) { 
+        ?>
+            <p class="error">
+                <?php  
+                    echo $_GET['error']; 
+                ?>
+            </p>
+            <?php 
+                } 
+            ?>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Username</label>
-                <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-                <label for="" class="form-label">Role</label>
-                <input type="text" class="form-control" id="exampleInputPassword1">
+                <label for="exampleInputEmail1" class="form-label" >Username</label>
+                <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="emailHelp"  name="uname">
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
@@ -74,3 +77,90 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
+
+<?php 
+
+session_start(); 
+
+include "db.php";
+
+if (isset($_POST['uname']) && isset($_POST['password'])) {
+
+    function validate($data){
+
+       $data = trim($data);
+
+       $data = stripslashes($data);
+
+       $data = htmlspecialchars($data);
+
+       return $data;
+
+    }
+
+    $uname = validate($_POST['uname']);
+
+    $pass = validate($_POST['password']);
+
+    if (empty($uname)) {
+
+        header("Location: index.php?error=User Name is required");
+
+        exit();
+
+    }else if(empty($pass)){
+
+        header("Location: index.php?error=Password is required");
+
+        exit();
+
+    }else{
+
+        $sql = "SELECT * FROM users WHERE user_name='$uname' AND password='$pass'";
+
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) === 1) {
+
+            $row = mysqli_fetch_assoc($result);
+
+            if ($row['user_name'] === $uname && $row['password'] === $pass) {
+
+                echo "<alert>Logged in</alert>";
+
+                $_SESSION['user_name'] = $row['user_name'];
+
+                $_SESSION['name'] = $row['name'];
+
+                $_SESSION['id'] = $row['id'];
+
+                header("Location: home.php");
+
+                exit();
+
+            }else{
+
+                header("Location: index.php?error=Incorect User name or password");
+
+                exit();
+
+            }
+
+        }else{
+
+            header("Location: index.php?error=Incorect User name or password");
+
+            exit();
+
+        }
+
+    }
+
+}else{
+
+    header("Location: index.php");
+
+    exit();
+
+}
