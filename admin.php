@@ -14,7 +14,7 @@ if (isset($_SESSION['Id']) && isset($_SESSION['user_name'])) {
     <title>Admin Page</title>
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/logo.jpeg" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
