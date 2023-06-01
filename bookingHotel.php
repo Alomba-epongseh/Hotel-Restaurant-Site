@@ -345,7 +345,7 @@ if (isset($_POST['insert_post'])) {
 if($result){
     echo "<script>alert('Room Successfully Booked')</script>";
     echo "<script>alert('We will get back to you, if any changes.')</script>";
-    echo "<script>window.open('booking hotel.php','_self')</script>";
+    echo "<script>window.open('bookinghotel.php','_self')</script>";
 }
 }
 ?>

@@ -1,11 +1,4 @@
-><?php
-
-session_start(); 
-
-if (isset($_SESSION['Id']) && isset($_SESSION['user_name'])) {
-
-?>
-
+<DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,7 +29,7 @@ if (isset($_SESSION['Id']) && isset($_SESSION['user_name'])) {
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="bdy" style="background: linear-gradient(rgba(128, 128, 128, 0.43),rgba(128, 128, 128, 0.43)),url(img/hotelview.jpg); background-size: contain; ">
+<body class="bdy"  style="background: linear-gradient(rgba(128, 128, 128, 0.43),rgba(128, 128, 128, 0.43)),url(img/hotelview.jpg); background-size: contain; ">
     <div class="container-fluid bg-dark px-0 m-0">
         <div class="row gx-0">
             <div class="col-lg-3 bg-dark d-none d-lg-block">
@@ -47,7 +40,7 @@ if (isset($_SESSION['Id']) && isset($_SESSION['user_name'])) {
             </div>
         </div>
     </div>
-    <div class="container-fluid d-flex" style="height: 100vh" >
+    <div class="container-fluid d-flex" style="height: 100vh">
         <div class="m-0 col-lg-6" style="width: 15%; background: linear-gradient(rgba(157, 201, 251, 0.401),rgba(157, 201, 251, 0.401))">
             <div class="sidebar navbar-nav mr-auto p-2">
                 <a href="addmenu.php" class="nav-item nav-link ">MENU</a>
@@ -63,10 +56,22 @@ if (isset($_SESSION['Id']) && isset($_SESSION['user_name'])) {
         </div>
     
         <div class="container-fluid col-lg-6">
-            <div class="admindashboard text-center align-item-center">
-               <p style="text-align: center; padding: 30px;">
-                    <h1 class="text-center"> WELCOME TO THE ADMIN'S DASHBOARD.</h1>
-               </p>
+            <div class="bg-light">
+                <form class="form p-3" action="#" enctype="multipart/form-data" method="post" style="margin-top: 25%; ">
+                    <div class="mb-3">
+                      <label for="exampleMealName" class="form-label">Staff Name</label>
+                      <input type="text" class="form-control" id="fullname" name="fullname" required >
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputRole" class="form-label">Staff Role</label>
+                      <input type="text" class="form-control" id="role" name="role" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputImage" class="form-label">Image</label>
+                        <input type="file" class="form-control" id="image" name="image" required style="height: 50px;" >
+                    </div>
+                    <button type="submit" class="btn btn-primary" name="insert_post">Submit</button>
+                </form>
             </div>
         
             
@@ -91,11 +96,26 @@ if (isset($_SESSION['Id']) && isset($_SESSION['user_name'])) {
 </html>
 
 <?php
+
+include 'db.php';
+$conn = openconn();
+
+
+if (isset($_POST['insert_post'])) {
+    $fullname = $_POST['fullname'];
+    $role = $_POST['role'];
+
+    $Image = $_FILES['image']['name'];
+    $Image_temporal = $_FILES['image']['temporal_name'];
+
+    
+    $staffquery = "INSERT INTO restaustaff (Full_name, Role, Images ) VALUES ('$fullname','$role','$Image')";
+    $result = mysqli_query($conn, $staffquery);
+
+
+if($result){
+    echo "<script>alert('Staff List Successfully Updated')</script>";
+    echo "<script>window.open('addrestaustaff.php','_self')</script>";
 }
-else{
-
-    header("Location: indexlogin.php");
-
-    exit();
 }
 ?>
