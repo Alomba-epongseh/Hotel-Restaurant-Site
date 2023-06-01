@@ -560,15 +560,21 @@
 
 
   /*admin page*/
-  .bdy{
+  /*.bdy{
     background: linear-gradient(rgba(128, 128, 128, 0.43),rgba(128, 128, 128, 0.43)),url(/img/hotelview.jpg);
+    background-color: white;
     background-size: contain;
+  }*/
+
+  .form{
+    background: linear-gradient(skyblue,lightpink);
   }
 
   .admindashboard{
     align-content: center; 
+    justify-content: center;
     margin-top: 20%; 
-    height: 300px; 
+    height: 350px; 
     width: 100%; 
     background: linear-gradient(skyblue,lightpink);
   }
