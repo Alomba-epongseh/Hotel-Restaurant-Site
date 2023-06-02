@@ -117,6 +117,10 @@ if (isset($_POST['insert_post'])) {
     $Price = $_POST['price'];
     $Desc = $_POST['desc'];
     $Image = $_FILES['image']['name'];
+    $Image_temporal = $_FILES['image']['temporal_name'];
+
+    move_uploaded_file($Image_temporal,"room_images/$Image");
+
 
     
     //mysqli_query($conn, "SELECT * FROM roombooking");

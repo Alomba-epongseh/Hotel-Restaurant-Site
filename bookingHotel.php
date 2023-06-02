@@ -194,12 +194,12 @@
                                         <div class="form-floating">
                                             <select class="form-select" id="select3" name="Room_type" required>
                                               <option value="1">Select A Room</option>
-                                              <option value="2">Simple suite</option>
-                                              <option value="3">Executive Suite</option>
-                                              <option value="4">Children Suite</option>
-                                              <option value="5">Master Suite</option>
-                                              <option value="6">Classic Deluxe</option>
-                                              <option value="7">Junior Deluxe</option>
+                                              <option value="Simple suite">Simple suite</option>
+                                              <option value="Executive Suite">Executive Suite</option>
+                                              <option value="Children Suite">Children Suite</option>
+                                              <option value="Master Suite">Master Suite</option>
+                                              <option value="Classic Deluxe">Classic Deluxe</option>
+                                              <option value="Junior Deluxe">Junior Deluxe</option>
                                             </select>
                                             <label for="select3">Select A Room</label>
                                           </div>

@@ -108,6 +108,8 @@ if (isset($_POST['insert_post'])) {
     $Image = $_FILES['image']['name'];
     $Image_temporal = $_FILES['image']['temporal_name'];
 
+    move_uploaded_file($Image_temporal,"staff_images/$Image");
+
     
     $staffquery = "INSERT INTO hotelstaff (Full_name, Role, Images ) VALUES ('$fullname','$role','$Image')";
     $result = mysqli_query($conn, $staffquery);
