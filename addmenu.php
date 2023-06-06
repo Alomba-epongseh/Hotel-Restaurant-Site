@@ -80,7 +80,14 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputCategory" class="form-label">Category</label>
-                            <input type="text" class="form-control" id="category" name="category" required>
+                            <!--<input type="text" class="form-control" id="category" name="category" required>-->
+                            <select class="form-select" id="select1" name="category" required>
+                              <option value="1">Select Category</option>
+                              <option value="Breakfast">Breakfast</option>
+                              <option value="Lunch">Lunch</option>
+                              <option value="Others">Others</option>
+                              <option value="Juice">Juice</option>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputImage" class="form-label">Image</label>
@@ -114,7 +121,7 @@
 
 
 <?php
-
+//submitting file to the database
 
 
 if (isset($_POST['insert_post'])) {
