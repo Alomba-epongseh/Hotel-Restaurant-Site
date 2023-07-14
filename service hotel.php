@@ -34,13 +34,6 @@
 
 <body>
     <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
 
         <!-- Header Start -->
         <div class="container-fluid bg-dark px-0" style="margin-top: 10%;">
@@ -112,67 +105,14 @@
                     <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Services</span></h1>
                 </div>
                 <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp rounded" data-wow-delay="0.1s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded-circle p-1 ">
-                                <div class="w-100 h-100 border rounded-circle align-items-center justify-content-center p-4">
-                                    <i class="fa fa-hotel fa-2x text-primary "></i><br>
-                                    <h5 class="mb-3">Rooms & Apartments</h5>
-                                </div>
-                                
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded-circle p-1">
-                                <div class="w-100 h-100 border rounded-circle align-items-center justify-content-center p-4">
-                                    <i class="fa fa-utensils fa-2x text-primary"></i>
-                                    <h5 class="mb-3">Food & Restaurant</h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded-circle p-1">
-                                <div class="w-100 h-100 border rounded-circle align-items-center justify-content-center p-4">
-                                    <i class="fa fa-spa fa-2x text-primary"></i>
-                                    <h5 class="mb-3">Spa & Fitness</h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded-circle p-1">
-                                <div class="w-100 h-100 border rounded-circle align-items-center justify-content-center p-4">
-                                    <i class="fa fa-swimmer fa-2x text-primary"></i>
-                                    <h5 class="mb-3">Sports & Gaming</h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded-circle p-1">
-                                <div class="w-100 h-100 border rounded-circle align-items-center justify-content-center p-4">
-                                    <i class="fa fa-glass-cheers fa-2x text-primary"></i>
-                                    <h5 class="mb-3">Event & Party</h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <a class="service-item rounded" href="">
-                            <div class="service-icon bg-transparent border rounded-circle p-1">
-                                <div class="w-100 h-100 border rounded-circle align-items-center justify-content-center p-4">
-                                    <i class="fa fa-dumbbell fa-2x text-primary"></i>
-                                    <h5 class="mb-3">GYM & Yoga</h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                <?php
+                    include_once "db.php";
+                    include_once "function.php";
+                    $conn=openconn();
+                    hotelservices();
+
+?>
+
                 </div>
             </div>
         </div>

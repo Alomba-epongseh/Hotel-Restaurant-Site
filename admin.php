@@ -1,10 +1,17 @@
-><?php
+<?php
 
 session_start(); 
 
 if (isset($_SESSION['Id']) && isset($_SESSION['user_name'])) {
 
 ?>
+<?php
+
+include_once "db.php";
+$conn=openconn();
+
+?>
+
 
 <html lang="en">
 <head>
@@ -48,26 +55,102 @@ if (isset($_SESSION['Id']) && isset($_SESSION['user_name'])) {
         </div>
     </div>
     <div class="container-fluid d-flex" style="height: 100vh" >
-        <div class="m-0 col-lg-6" style="width: 15%; background: linear-gradient(rgba(157, 201, 251, 0.401),rgba(157, 201, 251, 0.401))">
+        <div class="m-0 col-lg-4" style="width: 15%; background: linear-gradient(rgba(157, 201, 251, 0.401),rgba(157, 201, 251, 0.401))">
             <div class="sidebar navbar-nav mr-auto p-2">
-                <a href="addmenu.php" class="nav-item nav-link ">MENU</a>
-                <a href="addroom.php" class="nav-item nav-link active ">ROOMS</a>
-                <a href="addrestaustaff.php" class="nav-item nav-link">RESTAU STAFF</a>
-                <a href="addhotelstaff.php" class="nav-item nav-link">HOTEL STAFF</a>
-                <a href="addrestauservices.php" class="nav-item nav-link">RESTAU SERVICES</a>
-                <a href="addhotelservices.php" class="nav-item nav-link">HOTEL SERVICES</a>
-                <a href="restaureservations.php" class="nav-item nav-link">RESTAU RESERVATIONS</a>
-                <a href="hotelreservations.php" class="nav-item nav-link">HOTEL RESERVATIONS</a>
-                <a href="logout.php" class="btn btn-danger text-uppercase mt-5 justify-content-end" >Logout</a>
+                <a href="admin.php?addmenu" class="nav-item nav-link ">MENU</a>
+                <a href="admin.php?viewmenu" class="nav-item nav-link ">VIEW MENU</a>
+                <a href="admin.php?addroom" class="nav-item nav-link active ">ROOMS</a>
+                <a href="admin.php?viewrooms" class="nav-item nav-link active ">VIEW ROOMS</a>
+                <a href="admin.php?addrestaustaff" class="nav-item nav-link">RESTAU STAFF</a>
+                <a href="admin.php?viewrestaustaff" class="nav-item nav-link">VIEW RESTAU STAFF</a>
+                <a href="admin.php?addhotelstaff" class="nav-item nav-link">HOTEL STAFF</a>
+                <a href="admin.php?viewhotelstaff" class="nav-item nav-link">VIEW HOTEL STAFF</a>
+                <a href="admin.php?addrestauservices" class="nav-item nav-link">RESTAU SERVICES</a>
+                <a href="admin.php?addhotelservices" class="nav-item nav-link">HOTEL SERVICES</a>
+                <a href="admin.php?restaureservations" class="nav-item nav-link">RESTAU RESERVATIONS</a>
+                <a href="admin.php?hotelreservation" class="nav-item nav-link">HOTEL RESERVATIONS</a>
+                <a href="admin.php?logout" class="btn btn-danger text-uppercase mt-5 justify-content-end" >Logout</a>
             </div>
         </div>
     
-        <div class="container-fluid col-lg-6">
-            <div class="admindashboard text-center align-item-center">
-               <p style="text-align: center; padding: 30px;">
-                    <h1 class="text-center"> WELCOME TO THE ADMIN'S DASHBOARD.</h1>
-               </p>
-            </div>
+        <div class="container-fluid col-lg-8">
+            
+
+            <?php
+
+                if (isset($_GET['addmenu'])) {
+                   include_once "addmenu.php";
+                }
+                elseif (isset($_GET['addroom'])) {
+                    include_once "addroom.php";
+                }
+                elseif (isset($_GET['addrestaustaff'])) {
+                    include_once "addrestaustaff.php";
+                }
+                elseif (isset($_GET['addhotelstaff'])) {
+                    include_once "addhotelstaff.php";
+                }
+                elseif (isset($_GET['addrestauservices'])) {
+                    include_once "addrestauservices.php";
+                }
+                elseif (isset($_GET['addhotelservices'])) {
+                    include_once "addhotelservices.php";
+                }
+                elseif (isset($_GET['restaureservations'])) {
+                    include_once "restaureservations.php";
+                }
+                elseif (isset($_GET['hotelreservation'])) {
+                    include_once "hotelreservations.php";
+                }
+                elseif (isset($_GET['viewhotelstaff'])) {
+                    include_once "viewhotelstaff.php";
+                }
+                elseif (isset($_GET['viewrestaustaff'])) {
+                    include_once "viewrestaustaff.php";
+                }
+                elseif (isset($_GET['viewrooms'])) {
+                    include_once "viewrooms.php";
+                }
+                elseif (isset($_GET['viewmenu'])) {
+                    include_once "viewmenu.php";
+                }
+                elseif (isset($_GET['delete_hotelstaff'])) {
+                    include_once "delete_hotelstaff.php";
+                }
+                elseif (isset($_GET['delete_restaustaff'])) {
+                    include_once "delete_restaustaff.php";
+                }
+                elseif (isset($_GET['delete_menu'])) {
+                    include_once "delete_menu.php";
+                }
+                elseif (isset($_GET['delete_room'])) {
+                    include_once "delete_room.php";
+                }
+                elseif (isset($_GET['edit_room'])) {
+                    include_once "edit_room.php";
+                }
+                elseif (isset($_GET['edit_menu'])) {
+                    include_once "edit_menu.php";
+                }
+                elseif (isset($_GET['edit_hotelstaff'])) {
+                    include_once "edit_hotelstaff.php";
+                }
+                elseif (isset($_GET['edit_restaustaff'])) {
+                    include_once "edit_restaustaff.php";
+                }
+                elseif (isset($_GET['logout'])) {
+                    include_once "logout.php";
+                }
+                else {
+                    echo "
+                    <div class='admindashboard text-center align-item-center'>
+                    <p style='text-align: center; padding: 30px;'>
+                         <h1 class='text-center'> WELCOME TO THE ADMIN'S DASHBOARD.</h1>
+                    </p>
+                 </div>
+                    ";
+                }
+            ?>
         
             
         </div>
