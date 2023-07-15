@@ -1,9 +1,9 @@
 <?php
-                include_once "db.php";
-                include_once "function.php";
-                $conn=openconn();
-                
-                ?>
+    include_once "db.php";
+    include_once "function.php";
+    $conn=openconn();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
